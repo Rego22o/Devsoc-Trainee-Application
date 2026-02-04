@@ -1,0 +1,140 @@
+[data-theme="dark"] {
+  --palette1: #222831;
+  --palette2: #393E46;
+  --palette3: #948979;
+  --palette4: #DFD0B8;
+  --theme-icon: url("./svg/moon.svg")
+}
+
+[data-theme="light"] {
+  --palette1: #F9F8F6;
+  --palette2: #EFE9E3;
+  --palette3: #D9CFC7;
+  --palette4: #C9B59C;
+  --theme-icon: url("./svg/sun.svg")
+}
+
+.navbar {
+  box-sizing: border-box;
+
+  justify-content: space-between;
+
+  background-color: var(--palette1);
+ 
+  height: 10vh;
+  display: flex;
+  padding: 10px
+}
+
+.theme-toggle {
+  border-radius: 5%;
+  aspect-ratio: 1;
+  padding: 10px;
+  height: 100%;
+  background-color: var(--palette2);
+
+}
+
+.theme-toggle-image {
+  background-image: var(--theme-icon);
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.navbar-right {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-button {
+  transition: transform 0.2s ease;
+  border-radius: 5%;
+  border: none;
+  aspect-ratio: 1;
+  background-color: var(--palette4);
+  background-color: transparent;
+  display: block;
+  height: 50%
+}
+
+.navbar-button:hover {
+  transform: translateY(-10px)
+}
+
+body {
+  margin: 0
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--palette2);
+  min-height: 90vh;
+}
+
+.introduction {
+  color: var(--palette4);
+  text-align: center;
+}
+
+.name {
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.content {
+  gap: 50px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 40% 40%;
+
+}
+
+.box {
+  background-color: var(--palette1);
+
+  justify-content: center;
+}
+
+.box * {
+  color: var(--palette4)
+}
+
+.box > h1 {
+  text-align: center;
+}
+
+.box {
+  padding: 10px;
+  color: var(--palette3)
+}
+
+.projects {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 10px 30px 10px 30px;
+}
+
+.other {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 10px 30px 10px 30px;
+}
+
+@media (max-width: 980px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects {
+    grid-column: 1; 
+  }
+  .other {
+    grid-column: 1
+  }
+}
